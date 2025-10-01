@@ -43,3 +43,16 @@ func TestConversion(t *testing.T) {
 		t.Errorf("Expected 2023-09-12, got %d-%d-%d", gy, gm, gd)
 	}
 }
+
+func TestConversionBack(t *testing.T) {
+	gy, gm, gd := 2023, 9, 12
+	et, err := FromGregorian(gy, gm, gd)
+
+	if err != nil {
+		t.Error(err)
+	}
+
+	if et.Year != 2016 || et.Month != 1 || et.Day != 1 {
+		t.Errorf("Expected 2016-01-01, got %d-%d-%d", et.Year, et.Month, et.Day)
+	}
+}
