@@ -1050,20 +1050,148 @@
                                 data-bs-parent="#docsAccordion"
                             >
                                 <div class="accordion-body">
-                                    <h6>Conversion Example</h6>
+                                    <h6>Date Representation and Validation</h6>
                                     <pre class="code-snippet">
-date := ethiopiancalendar.EtDate{Year: 2016, Month: 1, Day: 1}
-y, m, d, err := date.ToGregorian()
-if err != nil {
-    fmt.Println("Error:", err)
-} else {
-    fmt.Printf("Gregorian: %d-%02d-%02d\n", y, m, d) // 2023-09-12
+package main
+
+import (
+    "fmt"
+    "github.com/mel-ak/ethiopiancalendar"
+)
+
+func main() {
+    date := ethiopiancalendar.EtDate{Year: 2016, Month: 1, Day: 1}
+    if err := date.Validate(); err != nil {
+        fmt.Println("Invalid date:", err)
+    } else {
+        fmt.Println("Valid date:", date.Year, date.Month, date.Day)
+    }
+    // Output: Valid date: 2016 1 1
+}</pre
+                                    >
+                                    <h6>Leap Year Check</h6>
+                                    <pre class="code-snippet">
+package main
+
+import (
+    "fmt"
+    "github.com/mel-ak/ethiopiancalendar"
+)
+
+func main() {
+    year := 2015 // 2015 EC is a leap year
+    isLeap := ethiopiancalendar.IsLeap(year)
+    days := ethiopiancalendar.DaysInMonth(year, 13)
+    fmt.Printf("Year %d is leap: %v, Days in Pagumē: %d\n", year, isLeap, days)
+    // Output: Year 2015 is leap: true, Days in Pagumē: 6
+}</pre
+                                    >
+                                    <h6>Ethiopian to Gregorian Conversion</h6>
+                                    <pre class="code-snippet">
+package main
+
+import (
+    "fmt"
+    "github.com/mel-ak/ethiopiancalendar"
+)
+
+func main() {
+    date := ethiopiancalendar.EtDate{Year: 2016, Month: 1, Day: 1}
+    y, m, d, err := date.ToGregorian()
+    if err != nil {
+        fmt.Println("Error:", err)
+    } else {
+        fmt.Printf("Gregorian: %d-%02d-%02d\n", y, m, d)
+    }
+    // Output: Gregorian: 2023-09-12
+}</pre
+                                    >
+                                    <h6>Gregorian to Ethiopian Conversion</h6>
+                                    <pre class="code-snippet">
+package main
+
+import (
+    "fmt"
+    "github.com/mel-ak/ethiopiancalendar"
+)
+
+func main() {
+    date, err := ethiopiancalendar.FromGregorian(2023, 9, 12)
+    if err != nil {
+        fmt.Println("Error:", err)
+    } else {
+        fmt.Printf("Ethiopian: %d/%d/%d\n", date.Year, date.Month, date.Day)
+    }
+    // Output: Ethiopian: 2016/1/1
 }</pre
                                     >
                                     <h6>Formatting Example</h6>
                                     <pre class="code-snippet">
-date := ethiopiancalendar.EtDate{Year: 2016, Month: 1, Day: 1}
-fmt.Println(date.Format("DD Month YYYY")) // 01 Mäskäräm 2016</pre
+package main
+
+import (
+    "fmt"
+    "github.com/mel-ak/ethiopiancalendar"
+)
+
+func main() {
+    date := ethiopiancalendar.EtDate{Year: 2016, Month: 1, Day: 1}
+    formatted := date.Format("DD Month YYYY")
+    fmt.Println(formatted)
+    // Output: 01 Mäskäräm 2016
+}</pre
+                                    >
+                                    <h6>Arithmetic: Add/Subtract Days</h6>
+                                    <pre class="code-snippet">
+package main
+
+import (
+    "fmt"
+    "github.com/mel-ak/ethiopiancalendar"
+)
+
+func main() {
+    date := ethiopiancalendar.EtDate{Year: 2016, Month: 1, Day: 1}
+    newDate, err := date.AddDays(40)
+    if err != nil {
+        fmt.Println("Error:", err)
+    } else {
+        fmt.Printf("After adding 40 days: %d/%d/%d\n", newDate.Year, newDate.Month, newDate.Day)
+    }
+    // Output: After adding 40 days: 2016/2/11
+}</pre
+                                    >
+                                    <h6>Arithmetic: Add/Subtract Months</h6>
+                                    <pre class="code-snippet">
+package main
+
+import (
+    "fmt"
+    "github.com/mel-ak/ethiopiancalendar"
+)
+
+func main() {
+    date := ethiopiancalendar.EtDate{Year: 2016, Month: 1, Day: 1}
+    newDate := date.AddMonths(14)
+    fmt.Printf("After adding 14 months: %d/%d/%d\n", newDate.Year, newDate.Month, newDate.Day)
+    // Output: After adding 14 months: 2017/3/1
+}</pre
+                                    >
+                                    <h6>Arithmetic: Add/Subtract Years</h6>
+                                    <pre class="code-snippet">
+package main
+
+import (
+    "fmt"
+    "github.com/mel-ak/ethiopiancalendar"
+)
+
+func main() {
+    date := ethiopiancalendar.EtDate{Year: 2016, Month: 1, Day: 1}
+    newDate := date.AddYears(-2)
+    fmt.Printf("After subtracting 2 years: %d/%d/%d\n", newDate.Year, newDate.Month, newDate.Day)
+    // Output: After subtracting 2 years: 2014/1/1
+}</pre
                                     >
                                 </div>
                             </div>
