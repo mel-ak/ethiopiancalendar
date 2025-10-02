@@ -56,3 +56,16 @@ func TestConversionBack(t *testing.T) {
 		t.Errorf("Expected 2016-01-01, got %d-%d-%d", et.Year, et.Month, et.Day)
 	}
 }
+
+func TestAddDays(t *testing.T) {
+	et := EtDate{Year: 2016, Month: 1, Day: 1}
+	future, err := et.AddDays(10)
+
+	if err != nil {
+		t.Error(err)
+	}
+
+	if future.Year != 2016 || future.Month != 1 || future.Day != 11 {
+		t.Errorf("Expected 2016-01-11, got %d-%d-%d", future.Year, future.Month, future.Day)
+	}
+}
