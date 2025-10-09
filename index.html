@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en" data-bs-theme="light">
+<html lang="am" data-bs-theme="light">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Ethiopian Calendar</title>
+        <title>የኢትዮጵያ የቀን መቁጠሪያ</title>
         <!-- Bootstrap 5 CSS -->
         <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -178,8 +178,7 @@
         <nav class="navbar navbar-expand-lg fixed-top">
             <div class="container">
                 <a class="navbar-brand" href="#"
-                    ><i class="bi bi-calendar-event me-2"></i>Ethiopian
-                    Calendar</a
+                    ><i class="bi bi-calendar-event me-2"></i>የኢትዮጵያ የቀን መቁጠሪያ</a
                 >
                 <button
                     class="navbar-toggler"
@@ -196,42 +195,39 @@
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
                             <a class="nav-link" href="#current"
-                                ><i class="bi bi-clock-history me-1"></i>Current
-                                Date</a
+                                ><i class="bi bi-clock-history me-1"></i>የአሁኑ ቀን</a
                             >
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#conversion"
                                 ><i class="bi bi-arrow-left-right me-1"></i
-                                >Conversion</a
+                                >መለወጫ</a
                             >
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#formatting"
-                                ><i class="bi bi-type me-1"></i>Formatting</a
+                                ><i class="bi bi-type me-1"></i>ቅርጸት</a
                             >
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#arithmetic"
-                                ><i class="bi bi-calculator me-1"></i
-                                >Arithmetic</a
+                                ><i class="bi bi-calculator me-1"></i>ሒሳብ</a
                             >
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#leap"
-                                ><i class="bi bi-check-circle me-1"></i>Leap
-                                Check</a
+                                ><i class="bi bi-check-circle me-1"></i>ዘመን መለያ</a
                             >
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#calendar-view"
                                 ><i class="bi bi-calendar-month me-1"></i
-                                >Calendar View</a
+                                >የቀን መቁጠሪያ እይታ</a
                             >
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#docs"
-                                ><i class="bi bi-book me-1"></i>Docs</a
+                                ><i class="bi bi-book me-1"></i>ሰነዶች</a
                             >
                         </li>
                         <li class="nav-item">
@@ -239,7 +235,7 @@
                                 class="nav-link"
                                 href="https://github.com/mel-ak/ethiopiancalendar"
                                 target="_blank"
-                                ><i class="bi bi-github me-1"></i>GitHub</a
+                                ><i class="bi bi-github me-1"></i>ጊትሃብ</a
                             >
                         </li>
                         <li class="nav-item">
@@ -247,7 +243,7 @@
                                 <input
                                     class="form-check-input"
                                     type="checkbox"
-                                    id="darkDemoModeToggle"
+                                    id="darkModeToggle"
                                     aria-label="Toggle dark mode"
                                 />
                                 <label
@@ -264,15 +260,13 @@
 
         <div class="container">
             <h1 class="mb-4 text-center animate__animated animate__fadeIn">
-                Ethiopian Calendar
+                የኢትዮጵያ የቀን መቁጠሪያ
             </h1>
             <p
                 class="text-center mb-5 lead animate__animated animate__fadeIn"
                 style="animation-delay: 0.2s"
             >
-                Discover advanced features for the Ethiopian (Ge'ez) calendar:
-                seamless conversions, dynamic formatting, precise arithmetic,
-                and more.
+                ለኢትዮጵያዊ (ግእዝ) የቀን መቁጠሪያ የላቀ ባህሪያትን ያግኙ፡ ለስላሳ መለወጫዎች፣ ተለዋዋጭ ቅርጸቶች፣ ትክክለኛ ሒሳብ እና ሌሎችም።
             </p>
 
             <!-- Current Date Section -->
@@ -282,34 +276,32 @@
                 style="animation-delay: 0.4s"
             >
                 <div class="card-header">
-                    <i class="bi bi-clock-history me-2"></i>Current Date
+                    <i class="bi bi-clock-history me-2"></i>የአሁኑ ቀን
                 </div>
                 <div class="card-body">
                     <p class="mb-3">
-                        View today's date in both Gregorian and Ethiopian
-                        calendars.
+                        የዛሬውን ቀን በሁለቱም ግሪጎሪያን እና ኢትዮጵያ የቀን መቁጠሪያዎች ይመልከቱ።
                     </p>
                     <button id="refreshCurrent" class="btn btn-primary mb-3">
-                        <i class="bi bi-arrow-clockwise me-2"></i>Refresh
-                        Current Date
+                        <i class="bi bi-arrow-clockwise me-2"></i>የአሁኑን ቀን አድስ
                     </button>
                     <div class="row">
                         <div class="col-md-6">
-                            <h6>Gregorian Today</h6>
+                            <h6>የግሪጎሪያን ዛሬ</h6>
                             <p
                                 id="currentGreg"
                                 class="result-alert alert alert-info"
                             >
-                                <i class="bi bi-info-circle me-2"></i>Loading...
+                                <i class="bi bi-info-circle me-2"></i>በመጫን ላይ...
                             </p>
                         </div>
                         <div class="col-md-6">
-                            <h6>Ethiopian Today</h6>
+                            <h6>የኢትዮጵያ ዛሬ</h6>
                             <p
                                 id="currentEt"
                                 class="result-alert alert alert-info"
                             >
-                                <i class="bi bi-info-circle me-2"></i>Loading...
+                                <i class="bi bi-info-circle me-2"></i>በመጫን ላይ...
                             </p>
                         </div>
                     </div>
@@ -323,12 +315,12 @@
                 style="animation-delay: 0.6s"
             >
                 <div class="card-header">
-                    <i class="bi bi-arrow-left-right me-2"></i>Date Conversion
+                    <i class="bi bi-arrow-left-right me-2"></i>የቀን መለወጫ
                 </div>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-6 mb-4 mb-md-0">
-                            <h5>Ethiopian to Gregorian</h5>
+                            <h5>ከኢትዮጵያ ወደ ግሪጎሪያን</h5>
                             <form
                                 id="et-to-greg"
                                 class="needs-validation"
@@ -336,10 +328,10 @@
                             >
                                 <div class="mb-3">
                                     <label for="etYear" class="form-label"
-                                        >Year
+                                        >ዓመት
                                         <span
                                             data-bs-toggle="tooltip"
-                                            title="Ethiopian year (positive integer, e.g., 2018)"
+                                            title="የኢትዮጵያ ዓመት (አዎንታዊ ቁጥር፣ ለምሳሌ፡ 2018)"
                                             ><i
                                                 class="bi bi-info-circle"
                                             ></i></span
@@ -349,47 +341,31 @@
                                         class="form-control"
                                         id="etYear"
                                         min="1"
-                                        placeholder="e.g., 2018"
+                                        placeholder="ለምሳሌ፡ 2018"
                                         required
                                     />
                                     <div class="invalid-feedback">
-                                        Please enter a valid year (positive
-                                        integer).
+                                        እባክዎ ትክክለኛ ዓመት ያስገቡ (አዎንታዊ ቁጥር)።
                                     </div>
                                 </div>
                                 <div class="mb-3">
                                     <label for="etMonth" class="form-label"
-                                        >Month</label
+                                        >ወር</label
                                     >
                                     <select
                                         class="form-select"
                                         id="etMonth"
                                         required
                                     >
-                                        <option value="">Select Month</option>
-                                        <option value="1">1 - Mäskäräm</option>
-                                        <option value="2">2 - Ṭəqəmt</option>
-                                        <option value="3">3 - Ḫədar</option>
-                                        <option value="4">4 - Taḫśaś</option>
-                                        <option value="5">5 - Ṭərr</option>
-                                        <option value="6">6 - Yäkatit</option>
-                                        <option value="7">7 - Mägabit</option>
-                                        <option value="8">8 - Miyazya</option>
-                                        <option value="9">9 - Gənbot</option>
-                                        <option value="10">10 - Säne</option>
-                                        <option value="11">11 - Ḥamle</option>
-                                        <option value="12">12 - Nähase</option>
-                                        <option value="13">
-                                            13 - Ṗagʷəmen
-                                        </option>
+                                        <option value="">ወር ይምረጡ</option>
                                     </select>
                                     <div class="invalid-feedback">
-                                        Please select a month.
+                                        እባክዎ ወር ይምረጡ።
                                     </div>
                                 </div>
                                 <div class="mb-3">
                                     <label for="etDay" class="form-label"
-                                        >Day</label
+                                        >ቀን</label
                                     >
                                     <input
                                         type="number"
@@ -397,17 +373,16 @@
                                         id="etDay"
                                         min="1"
                                         max="30"
-                                        placeholder="e.g., 1"
+                                        placeholder="ለምሳሌ፡ 1"
                                         required
                                     />
                                     <div class="invalid-feedback">
-                                        Day must be between 1 and 30 (or 5/6 for
-                                        Pagʷəmen).
+                                        ቀኑ በ1 እና 30 መካከል መሆን አለበት (ወይም 5/6 ለጳጉሜ)።
                                     </div>
                                 </div>
                                 <button type="submit" class="btn btn-primary">
                                     <i class="bi bi-arrow-right-circle me-2"></i
-                                    >Convert
+                                    >ቀይር
                                 </button>
                             </form>
                             <div
@@ -418,11 +393,11 @@
                                 id="copyEtToGreg"
                                 class="btn btn-outline-secondary mt-2 d-none"
                             >
-                                <i class="bi bi-clipboard me-2"></i>Copy
+                                <i class="bi bi-clipboard me-2"></i>ቅዳ
                             </button>
                         </div>
                         <div class="col-md-6">
-                            <h5>Gregorian to Ethiopian</h5>
+                            <h5>ከግሪጎሪያን ወደ ኢትዮጵያ</h5>
                             <form
                                 id="greg-to-et"
                                 class="needs-validation"
@@ -430,10 +405,10 @@
                             >
                                 <div class="mb-3">
                                     <label for="gregDate" class="form-label"
-                                        >Date
+                                        >ቀን
                                         <span
                                             data-bs-toggle="tooltip"
-                                            title="Select or enter Gregorian date"
+                                            title="ግሪጎሪያን ቀን ይምረጡ ወይም ያስገቡ"
                                             ><i
                                                 class="bi bi-info-circle"
                                             ></i></span
@@ -442,16 +417,16 @@
                                         type="text"
                                         class="form-control"
                                         id="gregDate"
-                                        placeholder="e.g., 2025-10-01"
+                                        placeholder="ለምሳሌ፡ 2025-10-01"
                                         required
                                     />
                                     <div class="invalid-feedback">
-                                        Please select a valid date.
+                                        እባክዎ ትክክለኛ ቀን ይምረጡ።
                                     </div>
                                 </div>
                                 <button type="submit" class="btn btn-primary">
                                     <i class="bi bi-arrow-left-circle me-2"></i
-                                    >Convert
+                                    >ቀይር
                                 </button>
                             </form>
                             <div
@@ -462,7 +437,7 @@
                                 id="copyGregToEt"
                                 class="btn btn-outline-secondary mt-2 d-none"
                             >
-                                <i class="bi bi-clipboard me-2"></i>Copy
+                                <i class="bi bi-clipboard me-2"></i>ቅዳ
                             </button>
                         </div>
                     </div>
@@ -476,58 +451,45 @@
                 style="animation-delay: 0.8s"
             >
                 <div class="card-header">
-                    <i class="bi bi-type me-2"></i>Date Formatting
+                    <i class="bi bi-type me-2"></i>የቀን ቅርጸት
                 </div>
                 <div class="card-body">
                     <form id="format-form" class="needs-validation" novalidate>
                         <div class="row">
                             <div class="col-md-3 mb-3">
                                 <label for="formatYear" class="form-label"
-                                    >Year</label
+                                    >ዓመት</label
                                 >
                                 <input
                                     type="number"
                                     class="form-control"
                                     id="formatYear"
                                     min="1"
-                                    placeholder="e.g., 2018"
+                                    placeholder="ለምሳሌ፡ 2018"
                                     required
                                 />
                                 <div class="invalid-feedback">
-                                    Valid year required.
+                                    ትክክለኛ ዓመት ያስፈልጋል።
                                 </div>
                             </div>
                             <div class="col-md-3 mb-3">
                                 <label for="formatMonth" class="form-label"
-                                    >Month</label
+                                    >ወር</label
                                 >
                                 <select
                                     class="form-select"
                                     id="formatMonth"
                                     required
                                 >
-                                    <option value="">Select Month</option>
-                                    <option value="1">1 - Mäskäräm</option>
-                                    <option value="2">2 - Ṭəqəmt</option>
-                                    <option value="3">3 - Ḫədar</option>
-                                    <option value="4">4 - Taḫśaś</option>
-                                    <option value="5">5 - Ṭərr</option>
-                                    <option value="6">6 - Yäkatit</option>
-                                    <option value="7">7 - Mägabit</option>
-                                    <option value="8">8 - Miyazya</option>
-                                    <option value="9">9 - Gənbot</option>
-                                    <option value="10">10 - Säne</option>
-                                    <option value="11">11 - Ḥamle</option>
-                                    <option value="12">12 - Nähase</option>
-                                    <option value="13">13 - Ṗagʷəmen</option>
+                                    <option value="">ወር ይምረጡ</option>
                                 </select>
                                 <div class="invalid-feedback">
-                                    Select a month.
+                                    ወር ይምረጡ።
                                 </div>
                             </div>
                             <div class="col-md-3 mb-3">
                                 <label for="formatDay" class="form-label"
-                                    >Day</label
+                                    >ቀን</label
                                 >
                                 <input
                                     type="number"
@@ -535,16 +497,16 @@
                                     id="formatDay"
                                     min="1"
                                     max="30"
-                                    placeholder="e.g., 1"
+                                    placeholder="ለምሳሌ፡ 1"
                                     required
                                 />
                                 <div class="invalid-feedback">
-                                    Valid day required.
+                                    ትክክለኛ ቀን ያስፈልጋል።
                                 </div>
                             </div>
                             <div class="col-md-3 mb-3">
                                 <label for="formatLayout" class="form-label"
-                                    >Layout</label
+                                    >ቅርጸት</label
                                 >
                                 <select
                                     class="form-select"
@@ -552,22 +514,22 @@
                                     required
                                 >
                                     <option value="DD Month YYYY">
-                                        DD Month YYYY
+                                        ቀን ወር ዓመት
                                     </option>
                                     <option value="YYYY-MM-DD">
-                                        YYYY-MM-DD
+                                        ዓመት-ወር-ቀን
                                     </option>
                                     <option value="DD/MM/YYYY">
-                                        DD/MM/YYYY
+                                        ቀን/ወር/ዓመት
                                     </option>
                                     <option value="Month DD, YYYY">
-                                        Month DD, YYYY
+                                        ወር ቀን, ዓመት
                                     </option>
                                 </select>
                             </div>
                         </div>
                         <button type="submit" class="btn btn-primary">
-                            <i class="bi bi-type me-2"></i>Format
+                            <i class="bi bi-type me-2"></i>ቅረጽ
                         </button>
                     </form>
                     <div id="formatResult" class="result-alert mt-3"></div>
@@ -575,7 +537,7 @@
                         id="copyFormat"
                         class="btn btn-outline-secondary mt-2 d-none"
                     >
-                        <i class="bi bi-clipboard me-2"></i>Copy
+                        <i class="bi bi-clipboard me-2"></i>ቅዳ
                     </button>
                 </div>
             </div>
@@ -587,7 +549,7 @@
                 style="animation-delay: 1s"
             >
                 <div class="card-header">
-                    <i class="bi bi-calculator me-2"></i>Date Arithmetic
+                    <i class="bi bi-calculator me-2"></i>የቀን ሒሳብ
                 </div>
                 <div class="card-body">
                     <form
@@ -598,51 +560,38 @@
                         <div class="row">
                             <div class="col-md-3 mb-3">
                                 <label for="arithYear" class="form-label"
-                                    >Year</label
+                                    >ዓመት</label
                                 >
                                 <input
                                     type="number"
                                     class="form-control"
                                     id="arithYear"
                                     min="1"
-                                    placeholder="e.g., 2018"
+                                    placeholder="ለምሳሌ፡ 2018"
                                     required
                                 />
                                 <div class="invalid-feedback">
-                                    Valid year required.
+                                    ትክክለኛ ዓመት ያስፈልጋል።
                                 </div>
                             </div>
                             <div class="col-md-3 mb-3">
                                 <label for="arithMonth" class="form-label"
-                                    >Month</label
+                                    >ወር</label
                                 >
                                 <select
                                     class="form-select"
                                     id="arithMonth"
                                     required
                                 >
-                                    <option value="">Select Month</option>
-                                    <option value="1">1 - Mäskäräm</option>
-                                    <option value="2">2 - Ṭəqəmt</option>
-                                    <option value="3">3 - Ḫədar</option>
-                                    <option value="4">4 - Taḫśaś</option>
-                                    <option value="5">5 - Ṭərr</option>
-                                    <option value="6">6 - Yäkatit</option>
-                                    <option value="7">7 - Mägabit</option>
-                                    <option value="8">8 - Miyazya</option>
-                                    <option value="9">9 - Gənbot</option>
-                                    <option value="10">10 - Säne</option>
-                                    <option value="11">11 - Ḥamle</option>
-                                    <option value="12">12 - Nähase</option>
-                                    <option value="13">13 - Ṗagʷəmen</option>
+                                    <option value="">ወር ይምረጡ</option>
                                 </select>
                                 <div class="invalid-feedback">
-                                    Select a month.
+                                    ወር ይምረጡ።
                                 </div>
                             </div>
                             <div class="col-md-3 mb-3">
                                 <label for="arithDay" class="form-label"
-                                    >Day</label
+                                    >ቀን</label
                                 >
                                 <input
                                     type="number"
@@ -650,16 +599,16 @@
                                     id="arithDay"
                                     min="1"
                                     max="30"
-                                    placeholder="e.g., 1"
+                                    placeholder="ለምሳሌ፡ 1"
                                     required
                                 />
                                 <div class="invalid-feedback">
-                                    Valid day required.
+                                    ትክክለኛ ቀን ያስፈልጋል።
                                 </div>
                             </div>
                             <div class="col-md-3 mb-3">
                                 <label for="arithOperation" class="form-label"
-                                    >Operation</label
+                                    >አሰራር</label
                                 >
                                 <select
                                     class="form-select"
@@ -667,38 +616,38 @@
                                     required
                                 >
                                     <option value="days">
-                                        Add/Subtract Days
+                                        ቀኖችን ጨምር/ቀንስ
                                     </option>
                                     <option value="months">
-                                        Add/Subtract Months
+                                        ወራትን ጨምር/ቀንስ
                                     </option>
                                     <option value="years">
-                                        Add/Subtract Years
+                                        ዓመታትን ጨምር/ቀንስ
                                     </option>
                                 </select>
                             </div>
                         </div>
                         <div class="mb-3">
                             <label for="arithValue" class="form-label"
-                                >Value
+                                >እሴት
                                 <span
                                     data-bs-toggle="tooltip"
-                                    title="Positive to add, negative to subtract"
+                                    title="ለመጨመር አዎንታዊ፣ ለመቀነስ አሉታዊ"
                                     ><i class="bi bi-info-circle"></i></span
                             ></label>
                             <input
                                 type="number"
                                 class="form-control"
                                 id="arithValue"
-                                placeholder="e.g., 10 or -10"
+                                placeholder="ለምሳሌ፡ 10 ወይም -10"
                                 required
                             />
                             <div class="invalid-feedback">
-                                Valid value required.
+                                ትክክለኛ እሴት ያስፈልጋል።
                             </div>
                         </div>
                         <button type="submit" class="btn btn-primary">
-                            <i class="bi bi-calculator me-2"></i>Calculate
+                            <i class="bi bi-calculator me-2"></i>አስላ
                         </button>
                     </form>
                     <div id="arithResult" class="result-alert mt-3"></div>
@@ -706,7 +655,7 @@
                         id="copyArith"
                         class="btn btn-outline-secondary mt-2 d-none"
                     >
-                        <i class="bi bi-clipboard me-2"></i>Copy
+                        <i class="bi bi-clipboard me-2"></i>ቅዳ
                     </button>
                 </div>
             </div>
@@ -718,58 +667,44 @@
                 style="animation-delay: 1.2s"
             >
                 <div class="card-header">
-                    <i class="bi bi-check-circle me-2"></i>Leap Year & Days in
-                    Month
+                    <i class="bi bi-check-circle me-2"></i>ዘመን መለያ እና በወሩ ያሉ ቀኖች
                 </div>
                 <div class="card-body">
                     <form id="leap-form" class="needs-validation" novalidate>
                         <div class="row">
                             <div class="col-md-6 mb-3">
                                 <label for="leapYear" class="form-label"
-                                    >Year</label
+                                    >ዓመት</label
                                 >
                                 <input
                                     type="number"
                                     class="form-control"
                                     id="leapYear"
                                     min="1"
-                                    placeholder="e.g., 2018"
+                                    placeholder="ለምሳሌ፡ 2018"
                                     required
                                 />
                                 <div class="invalid-feedback">
-                                    Valid year required.
+                                    ትክክለኛ ዓመት ያስፈልጋል።
                                 </div>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label for="leapMonth" class="form-label"
-                                    >Month
+                                    >ወር
                                     <span
                                         data-bs-toggle="tooltip"
-                                        title="Leave blank for leap check only"
+                                        title="ለዘመን መለያ ብቻ ባዶ ይተዉት"
                                         ><i class="bi bi-info-circle"></i></span
                                 ></label>
                                 <select class="form-select" id="leapMonth">
                                     <option value="">
-                                        Optional - Select Month
+                                        አማራጭ - ወር ይምረጡ
                                     </option>
-                                    <option value="1">1 - Mäskäräm</option>
-                                    <option value="2">2 - Ṭəqəmt</option>
-                                    <option value="3">3 - Ḫədar</option>
-                                    <option value="4">4 - Taḫśaś</option>
-                                    <option value="5">5 - Ṭərr</option>
-                                    <option value="6">6 - Yäkatit</option>
-                                    <option value="7">7 - Mägabit</option>
-                                    <option value="8">8 - Miyazya</option>
-                                    <option value="9">9 - Gənbot</option>
-                                    <option value="10">10 - Säne</option>
-                                    <option value="11">11 - Ḥamle</option>
-                                    <option value="12">12 - Nähase</option>
-                                    <option value="13">13 - Ṗagʷəmen</option>
                                 </select>
                             </div>
                         </div>
                         <button type="submit" class="btn btn-primary">
-                            <i class="bi bi-check-circle me-2"></i>Check
+                            <i class="bi bi-check-circle me-2"></i>ፈትሽ
                         </button>
                     </form>
                     <div id="leapResult" class="result-alert mt-3"></div>
@@ -777,7 +712,7 @@
                         id="copyLeap"
                         class="btn btn-outline-secondary mt-2 d-none"
                     >
-                        <i class="bi bi-clipboard me-2"></i>Copy
+                        <i class="bi bi-clipboard me-2"></i>ቅዳ
                     </button>
                 </div>
             </div>
@@ -789,8 +724,7 @@
                 style="animation-delay: 1.4s"
             >
                 <div class="card-header">
-                    <i class="bi bi-calendar-month me-2"></i>Ethiopian Calendar
-                    View
+                    <i class="bi bi-calendar-month me-2"></i>የኢትዮጵያ የቀን መቁጠሪያ እይታ
                 </div>
                 <div class="card-body">
                     <form
@@ -801,52 +735,38 @@
                         <div class="row">
                             <div class="col-md-6 mb-3">
                                 <label for="calYear" class="form-label"
-                                    >Year</label
+                                    >ዓመት</label
                                 >
                                 <input
                                     type="number"
                                     class="form-control"
                                     id="calYear"
                                     min="1"
-                                    placeholder="e.g., 2018"
+                                    placeholder="ለምሳሌ፡ 2018"
                                     required
                                 />
                                 <div class="invalid-feedback">
-                                    Valid year required.
+                                    ትክክለኛ ዓመት ያስፈልጋል።
                                 </div>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label for="calMonth" class="form-label"
-                                    >Month</label
+                                    >ወር</label
                                 >
                                 <select
                                     class="form-select"
                                     id="calMonth"
                                     required
                                 >
-                                    <option value="">Select Month</option>
-                                    <option value="1">1 - Mäskäräm</option>
-                                    <option value="2">2 - Ṭəqəmt</option>
-                                    <option value="3">3 - Ḫədar</option>
-                                    <option value="4">4 - Taḫśaś</option>
-                                    <option value="5">5 - Ṭərr</option>
-                                    <option value="6">6 - Yäkatit</option>
-                                    <option value="7">7 - Mägabit</option>
-                                    <option value="8">8 - Miyazya</option>
-                                    <option value="9">9 - Gənbot</option>
-                                    <option value="10">10 - Säne</option>
-                                    <option value="11">11 - Ḥamle</option>
-                                    <option value="12">12 - Nähase</option>
-                                    <option value="13">13 - Ṗagʷəmen</option>
+                                    <option value="">ወር ይምረጡ</option>
                                 </select>
                                 <div class="invalid-feedback">
-                                    Select a month.
+                                    ወር ይምረጡ።
                                 </div>
                             </div>
                         </div>
                         <button type="submit" class="btn btn-primary">
-                            <i class="bi bi-calendar-month me-2"></i>Generate
-                            Calendar
+                            <i class="bi bi-calendar-month me-2"></i>የቀን መቁጠሪያ ፍጠር
                         </button>
                     </form>
                     <div id="calendarTable" class="mt-3 table-responsive"></div>
@@ -860,7 +780,7 @@
                 style="animation-delay: 1.6s"
             >
                 <div class="card-header">
-                    <i class="bi bi-book me-2"></i>Documentation
+                    <i class="bi bi-book me-2"></i>ሰነዶች
                 </div>
                 <div class="card-body">
                     <div class="accordion" id="docsAccordion">
@@ -875,7 +795,7 @@
                                     aria-controls="overview"
                                 >
                                     <i class="bi bi-info-circle me-2"></i
-                                    >Overview
+                                    >አጠቃላይ እይታ
                                 </button>
                             </h2>
                             <div
@@ -885,16 +805,7 @@
                                 data-bs-parent="#docsAccordion"
                             >
                                 <div class="accordion-body">
-                                    The
-                                    <strong
-                                        >Ethiopian Calendar Go Library</strong
-                                    >
-                                    provides utilities for the Ethiopian (Ge'ez)
-                                    calendar, a solar calendar with 13 months:
-                                    12 months of 30 days each, and Pagumē (13th)
-                                    with 5 or 6 days in leap years. It lags the
-                                    Gregorian calendar by ~7-8 years due to
-                                    differences in the Annunciation calculation.
+                                    <strong>የኢትዮጵያ የቀን መቁጠሪያ ጎ ላይብረሪ</strong> ለኢትዮጵያ (ግእዝ) የቀን መቁጠሪያ የተለያዩ መሳሪያዎችን ይሰጣል፣ ይህም ፀሐያዊ የቀን መቁጠሪያ ሲሆን 13 ወራት አሉት፡ 12 ወራት ለ30 ቀናት እና ጳጉሜ (13ኛ) በዘመን ማጠናቀቂያ ዓመት 5 ወይም 6 ቀናት አሉት። በግሪጎሪያን የቀን መቁጠሪያ ወደ ኋላ በ~7-8 ዓመታት ይቆጠራል ምክንያቱም በስሌቱ ልዩነት ነው።
                                 </div>
                             </div>
                         </div>
@@ -908,7 +819,7 @@
                                     aria-expanded="false"
                                     aria-controls="features"
                                 >
-                                    <i class="bi bi-star-fill me-2"></i>Features
+                                    <i class="bi bi-star-fill me-2"></i>ባህሪያት
                                 </button>
                             </h2>
                             <div
@@ -920,32 +831,22 @@
                                 <div class="accordion-body">
                                     <ul>
                                         <li>
-                                            <strong>Date Representation</strong
-                                            >: <code>EtDate</code> struct with
-                                            validation.
+                                            <strong>የቀን ውክፔዲ</strong>: <code>EtDate</code> መዋቅር ከማረጋገጫ ጋር።
                                         </li>
                                         <li>
-                                            <strong>Leap Years</strong>:
-                                            Determined by
-                                            <code>year % 4 == 3</code>.
+                                            <strong>ዘመን መለያ ዓመታት</strong>: በ <code>ዓመት % 4 == 3</code> ይወሰናል።
                                         </li>
                                         <li>
-                                            <strong>Conversions</strong>:
-                                            Bidirectional Ethiopian ↔ Gregorian
-                                            using Julian Day Number (JDN).
+                                            <strong>መለወጫዎች</strong>: ሁለት አቅጣጫ ኢትዮጵያ ↔ ግሪጎሪያን የጁሊያን ቀን ቁጥር (JDN) በመጠቀም።
                                         </li>
                                         <li>
-                                            <strong>Formatting</strong>: Custom
-                                            layouts with Amharic month names.
+                                            <strong>ቅርጸት</strong>: በአማርኛ የወር ስሞች ጋር ልዩ ቅርጸቶች።
                                         </li>
                                         <li>
-                                            <strong>Arithmetic</strong>:
-                                            Add/subtract days, months, years
-                                            with normalization.
+                                            <strong>ሒሳብ</strong>: ቀኖችን፣ ወራትን፣ ዓመታትን ጨምር/ቀንስ ከመደበኛነት ጋር።
                                         </li>
                                         <li>
-                                            <strong>No Dependencies</strong>:
-                                            Pure Go implementation.
+                                            <strong>የተጠላለፉ ጥገኛዎች የሉም</strong>: ንጹህ ጎ አፈፃፀም።
                                         </li>
                                     </ul>
                                 </div>
@@ -961,8 +862,7 @@
                                     aria-expanded="false"
                                     aria-controls="api"
                                 >
-                                    <i class="bi bi-code-slash me-2"></i>API
-                                    Reference
+                                    <i class="bi bi-code-slash me-2"></i>ኢፒአይ ማጣቀሻ
                                 </button>
                             </h2>
                             <div
@@ -972,239 +872,69 @@
                                 data-bs-parent="#docsAccordion"
                             >
                                 <div class="accordion-body">
-                                    <h6>Key Functions</h6>
+                                    <h6>ዋና ተግባራት</h6>
                                     <ul>
                                         <li>
-                                            <code>IsLeap(year int) bool</code>:
-                                            Check if a year is a leap year.
+                                            <code>IsLeap(ዓመት int) bool</code>: ዓመት ዘመን መለያ መሆኑን ያረጋግጡ።
                                         </li>
                                         <li>
                                             <code
-                                                >DaysInMonth(year, month int)
-                                                int</code
-                                            >: Get days in a month.
+                                                >DaysInMonth(ዓመት, ወር int) int</code
+                                            >: በወር ውስጥ ያሉ ቀኖችን ያግኙ።
                                         </li>
                                         <li>
                                             <code
                                                 >(EtDate).Validate() error</code
-                                            >: Validate an Ethiopian date.
+                                            >: የኢትዮጵያ ቀን ያረጋግጡ።
                                         </li>
                                         <li>
                                             <code
                                                 >(EtDate).ToGregorian() (int,
                                                 int, int, error)</code
-                                            >: Convert to Gregorian.
+                                            >: ወደ ግሪጎሪያን ይቀይሩ።
                                         </li>
                                         <li>
                                             <code
-                                                >FromGregorian(year, month, day
+                                                >FromGregorian(ዓመት, ወር, ቀን
                                                 int) (EtDate, error)</code
-                                            >: Convert from Gregorian.
+                                            >: ከግሪጎሪያን ይቀይሩ።
                                         </li>
                                         <li>
                                             <code
-                                                >(EtDate).Format(layout string)
+                                                >(EtDate).Format(ቅርጸት string)
                                                 string</code
-                                            >: Format date with layout.
+                                            >: ቀንን በቅርጸት ይቅረጹ።
                                         </li>
                                         <li>
                                             <code
-                                                >(EtDate).AddDays(days int)
+                                                >(EtDate).AddDays(ቀኖች int)
                                                 (EtDate, error)</code
-                                            >: Add/subtract days.
+                                            >: ቀኖችን ጨምር/ቀንስ።
                                         </li>
                                         <li>
                                             <code
-                                                >(EtDate).AddMonths(months int)
+                                                >(EtDate).AddMonths(ወራት int)
                                                 EtDate</code
-                                            >: Add/subtract months.
+                                            >: ወራትን ጨምር/ቀንስ።
                                         </li>
                                         <li>
                                             <code
-                                                >(EtDate).AddYears(years int)
+                                                >(EtDate).AddYears(ዓመታት int)
                                                 EtDate</code
-                                            >: Add/subtract years.
+                                            >: ዓመታትን ጨምር/ቀንስ።
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button
-                                    class="accordion-button collapsed"
-                                    type="button"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#examples"
-                                    aria-expanded="false"
-                                    aria-controls="examples"
-                                >
-                                    <i class="bi bi-code-square me-2"></i
-                                    >Examples
-                                </button>
-                            </h2>
-                            <div
-                                id="examples"
-                                class="accordion-collapse collapse"
-                                aria-labelledby="headingFour"
-                                data-bs-parent="#docsAccordion"
-                            >
-                                <div class="accordion-body">
-                                    <h6>Date Representation and Validation</h6>
-                                    <pre class="code-snippet">
-package main
-
-import (
-    "fmt"
-    "github.com/mel-ak/ethiopiancalendar"
-)
-
-func main() {
-    date := ethiopiancalendar.EtDate{Year: 2016, Month: 1, Day: 1}
-    if err := date.Validate(); err != nil {
-        fmt.Println("Invalid date:", err)
-    } else {
-        fmt.Println("Valid date:", date.Year, date.Month, date.Day)
-    }
-    // Output: Valid date: 2016 1 1
-}</pre
-                                    >
-                                    <h6>Leap Year Check</h6>
-                                    <pre class="code-snippet">
-package main
-
-import (
-    "fmt"
-    "github.com/mel-ak/ethiopiancalendar"
-)
-
-func main() {
-    year := 2015 // 2015 EC is a leap year
-    isLeap := ethiopiancalendar.IsLeap(year)
-    days := ethiopiancalendar.DaysInMonth(year, 13)
-    fmt.Printf("Year %d is leap: %v, Days in Pagumē: %d\n", year, isLeap, days)
-    // Output: Year 2015 is leap: true, Days in Pagumē: 6
-}</pre
-                                    >
-                                    <h6>Ethiopian to Gregorian Conversion</h6>
-                                    <pre class="code-snippet">
-package main
-
-import (
-    "fmt"
-    "github.com/mel-ak/ethiopiancalendar"
-)
-
-func main() {
-    date := ethiopiancalendar.EtDate{Year: 2016, Month: 1, Day: 1}
-    y, m, d, err := date.ToGregorian()
-    if err != nil {
-        fmt.Println("Error:", err)
-    } else {
-        fmt.Printf("Gregorian: %d-%02d-%02d\n", y, m, d)
-    }
-    // Output: Gregorian: 2023-09-12
-}</pre
-                                    >
-                                    <h6>Gregorian to Ethiopian Conversion</h6>
-                                    <pre class="code-snippet">
-package main
-
-import (
-    "fmt"
-    "github.com/mel-ak/ethiopiancalendar"
-)
-
-func main() {
-    date, err := ethiopiancalendar.FromGregorian(2023, 9, 12)
-    if err != nil {
-        fmt.Println("Error:", err)
-    } else {
-        fmt.Printf("Ethiopian: %d/%d/%d\n", date.Year, date.Month, date.Day)
-    }
-    // Output: Ethiopian: 2016/1/1
-}</pre
-                                    >
-                                    <h6>Formatting Example</h6>
-                                    <pre class="code-snippet">
-package main
-
-import (
-    "fmt"
-    "github.com/mel-ak/ethiopiancalendar"
-)
-
-func main() {
-    date := ethiopiancalendar.EtDate{Year: 2016, Month: 1, Day: 1}
-    formatted := date.Format("DD Month YYYY")
-    fmt.Println(formatted)
-    // Output: 01 Mäskäräm 2016
-}</pre
-                                    >
-                                    <h6>Arithmetic: Add/Subtract Days</h6>
-                                    <pre class="code-snippet">
-package main
-
-import (
-    "fmt"
-    "github.com/mel-ak/ethiopiancalendar"
-)
-
-func main() {
-    date := ethiopiancalendar.EtDate{Year: 2016, Month: 1, Day: 1}
-    newDate, err := date.AddDays(40)
-    if err != nil {
-        fmt.Println("Error:", err)
-    } else {
-        fmt.Printf("After adding 40 days: %d/%d/%d\n", newDate.Year, newDate.Month, newDate.Day)
-    }
-    // Output: After adding 40 days: 2016/2/11
-}</pre
-                                    >
-                                    <h6>Arithmetic: Add/Subtract Months</h6>
-                                    <pre class="code-snippet">
-package main
-
-import (
-    "fmt"
-    "github.com/mel-ak/ethiopiancalendar"
-)
-
-func main() {
-    date := ethiopiancalendar.EtDate{Year: 2016, Month: 1, Day: 1}
-    newDate := date.AddMonths(14)
-    fmt.Printf("After adding 14 months: %d/%d/%d\n", newDate.Year, newDate.Month, newDate.Day)
-    // Output: After adding 14 months: 2017/3/1
-}</pre
-                                    >
-                                    <h6>Arithmetic: Add/Subtract Years</h6>
-                                    <pre class="code-snippet">
-package main
-
-import (
-    "fmt"
-    "github.com/mel-ak/ethiopiancalendar"
-)
-
-func main() {
-    date := ethiopiancalendar.EtDate{Year: 2016, Month: 1, Day: 1}
-    newDate := date.AddYears(-2)
-    fmt.Printf("After subtracting 2 years: %d/%d/%d\n", newDate.Year, newDate.Month, newDate.Day)
-    // Output: After subtracting 2 years: 2014/1/1
-}</pre
-                                    >
-                                </div>
-                            </div>
-                        </div>
                     </div>
                     <p class="mt-3">
-                        For source code and contributions, visit the
+                        ለምንጭ ኮድ እና አስተዋፅዖዎች፣ ወደ 
                         <a
                             href="https://github.com/mel-ak/ethiopiancalendar"
                             target="_blank"
-                            ><i class="bi bi-github me-1"></i>GitHub
-                            repository</a
-                        >.
+                            ><i class="bi bi-github me-1"></i>ጊትሃብ ማከማቻ</a
+                        > ይጎብኙ።
                     </p>
                 </div>
             </div>
@@ -1214,9 +944,8 @@ func main() {
         <footer class="footer text-center">
             <div class="container">
                 <p class="mb-0">
-                    &copy; 2025 Ethiopian Calendar Library. Built with
-                    <i class="bi bi-heart-fill text-danger"></i> by Mel Ak.
-                    Version 1.0.0.
+                    &copy; 2025 የኢትዮጵያ የቀን መቁጠሪያ ላይብረሪ. በ 
+                    <i class="bi bi-heart-fill text-danger"></i> መል አክ ተሰርቷል። ስሪት 1.0.0.
                 </p>
             </div>
         </footer>
@@ -1229,6 +958,82 @@ func main() {
         ></script>
         <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
         <script>
+            // Centralized Amharic Translations
+            const translations = {
+                // Months
+                months: [
+                    { value: 1, name: "መስከረም" },
+                    { value: 2, name: "ጥቅምት" },
+                    { value: 3, name: "ኅዳር" },
+                    { value: 4, name: "ታኅሣሥ" },
+                    { value: 5, name: "ጥር" },
+                    { value: 6, name: "የካቲት" },
+                    { value: 7, name: "መጋቢት" },
+                    { value: 8, name: "ሚያዝያ" },
+                    { value: 9, name: "ግንቦት" },
+                    { value: 10, name: "ሰኔ" },
+                    { value: 11, name: "ሐምሌ" },
+                    { value: 12, name: "ነሐሴ" },
+                    { value: 13, name: "ጳጉሜ" }
+                ],
+
+                // Weekdays for calendar
+                weekdays: ["እሑድ", "ሰኞ", "ማክሰኞ", "ረቡዕ", "ሐሙስ", "ዓርብ", "ቅዳሜ"],
+
+                // Common strings
+                common: {
+                    loading: "በመጫን ላይ...",
+                    error: "ስህተት",
+                    copy: "ቅዳ",
+                    copied: "ተቀድቷል!",
+                    convert: "ቀይር",
+                    calculate: "አስላ",
+                    format: "ቅረጽ",
+                    check: "ፈትሽ",
+                    generate: "ፍጠር",
+                    refresh: "አድስ",
+                    today: "ዛሬ",
+                    gregorian: "ግሪጎሪያን",
+                    ethiopian: "ኢትዮጵያ"
+                },
+
+                // Result messages
+                results: {
+                    gregorianDate: "ግሪጎሪያን:",
+                    ethiopianDate: "ኢትዮጵያ:",
+                    formatted: "ተቀምጧል:",
+                    result: "ውጤት:",
+                    isLeapYear: "ዘመን መለያ ዓመት ነው:",
+                    daysInMonth: "በወሩ ያሉ ቀኖች:"
+                }
+            };
+
+            // Initialize month dropdowns
+            function initializeMonthDropdowns() {
+                const monthSelectors = [
+                    'etMonth', 'formatMonth', 'arithMonth', 
+                    'leapMonth', 'calMonth'
+                ];
+                
+                monthSelectors.forEach(selectorId => {
+                    const select = document.getElementById(selectorId);
+                    if (select) {
+                        // Clear existing options except the first one
+                        while (select.options.length > 1) {
+                            select.remove(1);
+                        }
+                        
+                        // Add month options
+                        translations.months.forEach(month => {
+                            const option = document.createElement('option');
+                            option.value = month.value;
+                            option.textContent = `${month.value} - ${month.name}`;
+                            select.appendChild(option);
+                        });
+                    }
+                });
+            }
+
             // Dark Mode Toggle
             const darkModeToggle = document.getElementById("darkModeToggle");
             const body = document.body;
@@ -1252,23 +1057,6 @@ func main() {
                 dateFormat: "Y-m-d",
                 defaultDate: new Date(),
             });
-
-            // Month Names Array
-            const monthNames = [
-                { value: 1, name: "Mäskäräm" },
-                { value: 2, name: "Ṭəqəmt" },
-                { value: 3, name: "Ḫədar" },
-                { value: 4, name: "Taḫśaś" },
-                { value: 5, name: "Ṭərr" },
-                { value: 6, name: "Yäkatit" },
-                { value: 7, name: "Mägabit" },
-                { value: 8, name: "Miyazya" },
-                { value: 9, name: "Gənbot" },
-                { value: 10, name: "Säne" },
-                { value: 11, name: "Ḥamle" },
-                { value: 12, name: "Nähase" },
-                { value: 13, name: "Ṗagʷəmen" },
-            ];
 
             // Utility Functions
             function clearResults(sectionId = null) {
@@ -1302,15 +1090,14 @@ func main() {
 
             function showError(elementId, message) {
                 const el = document.getElementById(elementId);
-                el.innerHTML = `<strong>Error:</strong> ${message}`;
+                el.innerHTML = `<strong>${translations.common.error}:</strong> ${message}`;
                 el.classList.add("alert", "alert-danger", "fade-in");
                 el.classList.remove("hidden");
             }
 
             function showLoading(elementId) {
                 const el = document.getElementById(elementId);
-                el.innerHTML =
-                    '<div class="spinner-border spinner-border-sm" role="status"><span class="visually-hidden">Loading...</span></div> Loading...';
+                el.innerHTML = `${translations.common.loading}`;
                 el.classList.add("alert", "alert-info", "fade-in");
                 el.classList.remove("hidden");
             }
@@ -1322,13 +1109,17 @@ func main() {
                 return form.checkValidity();
             }
 
-            // Debounce Function
-            function debounce(func, delay = 300) {
-                let timeout;
-                return (...args) => {
-                    clearTimeout(timeout);
-                    timeout = setTimeout(() => func(...args), delay);
-                };
+            // Copy to Clipboard
+            function copyToClipboard(text, buttonId) {
+                navigator.clipboard
+                    .writeText(text)
+                    .then(() => {
+                        const btn = document.getElementById(buttonId);
+                        const originalText = btn.innerHTML;
+                        btn.innerHTML = `<i class="bi bi-check-circle me-2"></i>${translations.common.copied}`;
+                        setTimeout(() => (btn.innerHTML = originalText), 2000);
+                    })
+                    .catch((err) => console.error("Copy failed", err));
             }
 
             // Current Date
@@ -1359,8 +1150,8 @@ func main() {
                     if (data.error) {
                         showError("currentEt", data.error);
                     } else {
-                        const monthName = monthNames.find(
-                            (m) => m.value === data.month,
+                        const monthName = translations.months.find(
+                            (m) => m.value === data.month
                         ).name;
                         showResult(
                             "currentEt",
@@ -1371,360 +1162,362 @@ func main() {
                     console.error("Current Date Error:", err);
                     showError(
                         "currentEt",
-                        "Server error - check console for details",
+                        "የሰርቨር ስህተት - ለዝርዝር ኮንሶል ይመልከቱ",
                     );
                 }
             }
-            loadCurrentDate();
-            document
-                .getElementById("refreshCurrent")
-                .addEventListener("click", loadCurrentDate);
 
-            // Form Validation Setup
-            [...document.querySelectorAll(".needs-validation")].forEach(
-                (form) => {
-                    form.addEventListener(
-                        "submit",
-                        (e) => {
-                            if (!form.checkValidity()) {
-                                e.preventDefault();
-                                e.stopPropagation();
-                            }
-                            form.classList.add("was-validated");
-                        },
-                        false,
-                    );
-                },
-            );
+            // Initialize the application
+            function initializeApp() {
+                initializeMonthDropdowns();
+                loadCurrentDate();
+                
+                // Set up event listeners
+                document
+                    .getElementById("refreshCurrent")
+                    .addEventListener("click", loadCurrentDate);
 
-            // Copy to Clipboard
-            function copyToClipboard(text, buttonId) {
-                navigator.clipboard
-                    .writeText(text)
-                    .then(() => {
-                        const btn = document.getElementById(buttonId);
-                        const originalText = btn.innerHTML;
-                        btn.innerHTML =
-                            '<i class="bi bi-check-circle me-2"></i>Copied!';
-                        setTimeout(() => (btn.innerHTML = originalText), 2000);
-                    })
-                    .catch((err) => console.error("Copy failed", err));
-            }
-
-            // Ethiopian to Gregorian
-            document
-                .getElementById("et-to-greg")
-                .addEventListener("submit", async (e) => {
-                    e.preventDefault();
-                    if (!validateForm("et-to-greg")) return;
-                    clearResults("conversion");
-                    showLoading("etToGregResult");
-                    const year = parseInt(
-                        document.getElementById("etYear").value,
-                    );
-                    const month = parseInt(
-                        document.getElementById("etMonth").value,
-                    );
-                    const day = parseInt(
-                        document.getElementById("etDay").value,
-                    );
-                    try {
-                        const res = await fetch("/api/convert", {
-                            method: "POST",
-                            headers: { "Content-Type": "application/json" },
-                            body: JSON.stringify({
-                                type: "etToGreg",
-                                year,
-                                month,
-                                day,
-                            }),
-                        });
-                        if (!res.ok) throw new Error("API response not OK");
-                        const data = await res.json();
-                        if (data.error) {
-                            showError("etToGregResult", data.error);
-                        } else {
-                            const message = `Gregorian: ${data.year}-${String(data.month).padStart(2, "0")}-${String(data.day).padStart(2, "0")}`;
-                            showResult("etToGregResult", message);
-                            document
-                                .getElementById("copyEtToGreg")
-                                .classList.remove("d-none");
-                            document.getElementById("copyEtToGreg").onclick =
-                                () => copyToClipboard(message, "copyEtToGreg");
-                        }
-                    } catch (err) {
-                        console.error("ET to Greg Error:", err);
-                        showError(
-                            "etToGregResult",
-                            "Server error - check console for details",
+                // Form Validation Setup
+                [...document.querySelectorAll(".needs-validation")].forEach(
+                    (form) => {
+                        form.addEventListener(
+                            "submit",
+                            (e) => {
+                                if (!form.checkValidity()) {
+                                    e.preventDefault();
+                                    e.stopPropagation();
+                                }
+                                form.classList.add("was-validated");
+                            },
+                            false,
                         );
-                    }
-                });
+                    },
+                );
 
-            // Gregorian to Ethiopian
-            document
-                .getElementById("greg-to-et")
-                .addEventListener("submit", async (e) => {
-                    e.preventDefault();
-                    if (!validateForm("greg-to-et")) return;
-                    clearResults("conversion");
-                    showLoading("gregToEtResult");
-                    const dateStr = document.getElementById("gregDate").value;
-                    const [year, month, day] = dateStr.split("-").map(Number);
-                    try {
-                        const res = await fetch("/api/convert", {
-                            method: "POST",
-                            headers: { "Content-Type": "application/json" },
-                            body: JSON.stringify({
-                                type: "gregToEt",
-                                year,
-                                month,
-                                day,
-                            }),
-                        });
-                        if (!res.ok) throw new Error("API response not OK");
-                        const data = await res.json();
-                        if (data.error) {
-                            showError("gregToEtResult", data.error);
-                        } else {
-                            const monthName = monthNames.find(
-                                (m) => m.value === data.month,
-                            ).name;
-                            const message = `Ethiopian: ${data.year}/${data.month} (${monthName}) /${data.day}`;
-                            showResult("gregToEtResult", message);
-                            document
-                                .getElementById("copyGregToEt")
-                                .classList.remove("d-none");
-                            document.getElementById("copyGregToEt").onclick =
-                                () => copyToClipboard(message, "copyGregToEt");
-                        }
-                    } catch (err) {
-                        console.error("Greg to ET Error:", err);
-                        showError(
-                            "gregToEtResult",
-                            "Server error - check console for details",
-                        );
-                    }
-                });
-
-            // Formatting
-            document
-                .getElementById("format-form")
-                .addEventListener("submit", async (e) => {
-                    e.preventDefault();
-                    if (!validateForm("format-form")) return;
-                    clearResults("formatting");
-                    showLoading("formatResult");
-                    const year = parseInt(
-                        document.getElementById("formatYear").value,
-                    );
-                    const month = parseInt(
-                        document.getElementById("formatMonth").value,
-                    );
-                    const day = parseInt(
-                        document.getElementById("formatDay").value,
-                    );
-                    const layout =
-                        document.getElementById("formatLayout").value;
-                    try {
-                        const res = await fetch("/api/format", {
-                            method: "POST",
-                            headers: { "Content-Type": "application/json" },
-                            body: JSON.stringify({ year, month, day, layout }),
-                        });
-                        if (!res.ok) throw new Error("API response not OK");
-                        const data = await res.json();
-                        if (data.error) {
-                            showError("formatResult", data.error);
-                        } else {
-                            const message = `Formatted: ${data.result}`;
-                            showResult("formatResult", message);
-                            document
-                                .getElementById("copyFormat")
-                                .classList.remove("d-none");
-                            document.getElementById("copyFormat").onclick =
-                                () => copyToClipboard(message, "copyFormat");
-                        }
-                    } catch (err) {
-                        console.error("Formatting Error:", err);
-                        showError(
-                            "formatResult",
-                            "Server error - check console for details",
-                        );
-                    }
-                });
-
-            // Arithmetic
-            document
-                .getElementById("arithmetic-form")
-                .addEventListener("submit", async (e) => {
-                    e.preventDefault();
-                    if (!validateForm("arithmetic-form")) return;
-                    clearResults("arithmetic");
-                    showLoading("arithResult");
-                    const year = parseInt(
-                        document.getElementById("arithYear").value,
-                    );
-                    const month = parseInt(
-                        document.getElementById("arithMonth").value,
-                    );
-                    const day = parseInt(
-                        document.getElementById("arithDay").value,
-                    );
-                    const operation =
-                        document.getElementById("arithOperation").value;
-                    const value = parseInt(
-                        document.getElementById("arithValue").value,
-                    );
-                    try {
-                        const res = await fetch("/api/arithmetic", {
-                            method: "POST",
-                            headers: { "Content-Type": "application/json" },
-                            body: JSON.stringify({
-                                year,
-                                month,
-                                day,
-                                operation,
-                                value,
-                            }),
-                        });
-                        if (!res.ok) throw new Error("API response not OK");
-                        const data = await res.json();
-                        if (data.error) {
-                            showError("arithResult", data.error);
-                        } else {
-                            const monthName = monthNames.find(
-                                (m) => m.value === data.month,
-                            ).name;
-                            const message = `Result: ${data.year}/${data.month} (${monthName}) /${data.day}`;
-                            showResult("arithResult", message);
-                            document
-                                .getElementById("copyArith")
-                                .classList.remove("d-none");
-                            document.getElementById("copyArith").onclick = () =>
-                                copyToClipboard(message, "copyArith");
-                        }
-                    } catch (err) {
-                        console.error("Arithmetic Error:", err);
-                        showError(
-                            "arithResult",
-                            "Server error - check console for details",
-                        );
-                    }
-                });
-
-            // Leap Year and Days
-            document
-                .getElementById("leap-form")
-                .addEventListener("submit", async (e) => {
-                    e.preventDefault();
-                    if (!validateForm("leap-form")) return;
-                    clearResults("leap");
-                    showLoading("leapResult");
-                    const year = parseInt(
-                        document.getElementById("leapYear").value,
-                    );
-                    const month = document.getElementById("leapMonth").value
-                        ? parseInt(document.getElementById("leapMonth").value)
-                        : 0;
-                    try {
-                        const res = await fetch("/api/leap", {
-                            method: "POST",
-                            headers: { "Content-Type": "application/json" },
-                            body: JSON.stringify({ year, month }),
-                        });
-                        if (!res.ok) throw new Error("API response not OK");
-                        const data = await res.json();
-                        if (data.error) {
-                            showError("leapResult", data.error);
-                        } else {
-                            let result = `Is Leap Year: ${data.isLeap}`;
-                            if (data.daysInMonth !== null) {
-                                result += ` | Days in Month: ${data.daysInMonth}`;
-                            }
-                            showResult("leapResult", result);
-                            document
-                                .getElementById("copyLeap")
-                                .classList.remove("d-none");
-                            document.getElementById("copyLeap").onclick = () =>
-                                copyToClipboard(result, "copyLeap");
-                        }
-                    } catch (err) {
-                        console.error("Leap Error:", err);
-                        showError(
-                            "leapResult",
-                            "Server error - check console for details",
-                        );
-                    }
-                });
-
-            // Calendar View Generation
-            document
-                .getElementById("calendar-form")
-                .addEventListener("submit", async (e) => {
-                    e.preventDefault();
-                    if (!validateForm("calendar-form")) return;
-                    const year = parseInt(
-                        document.getElementById("calYear").value,
-                    );
-                    const month = parseInt(
-                        document.getElementById("calMonth").value,
-                    );
-                    try {
-                        const res = await fetch("/api/leap", {
-                            method: "POST",
-                            headers: { "Content-Type": "application/json" },
-                            body: JSON.stringify({ year, month }),
-                        });
-                        if (!res.ok) throw new Error("API response not OK");
-                        const data = await res.json();
-                        if (data.error) {
-                            alert(data.error);
-                            return;
-                        }
-                        const days = data.daysInMonth || 30;
-                        let table =
-                            '<table class="table table-bordered calendar-table"><thead><tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr></thead><tbody><tr>';
-                        for (let i = 1; i <= days; i++) {
-                            if (i > 1 && (i - 1) % 7 === 0)
-                                table += "</tr><tr>";
-                            table += `<td>${i}</td>`;
-                        }
-                        table += "</tr></tbody></table>";
-                        document.getElementById("calendarTable").innerHTML =
-                            table;
-                        document
-                            .getElementById("calendarTable")
-                            .classList.add("fade-in");
-                    } catch (err) {
-                        console.error("Calendar Error:", err);
-                        alert("Server error - check console for details");
-                    }
-                });
-
-            // Smooth Scrolling for Navbar Links
-            document
-                .querySelectorAll('a.nav-link[href^="#"]')
-                .forEach((anchor) => {
-                    anchor.addEventListener("click", function (e) {
+                // Ethiopian to Gregorian
+                document
+                    .getElementById("et-to-greg")
+                    .addEventListener("submit", async (e) => {
                         e.preventDefault();
-                        const targetId = this.getAttribute("href").substring(1);
-                        const target = document.getElementById(targetId);
-                        if (target) {
-                            const offset = 90; // Adjust for fixed navbar
-                            const bodyRect =
-                                document.body.getBoundingClientRect().top;
-                            const elementRect =
-                                target.getBoundingClientRect().top;
-                            const elementPosition = elementRect - bodyRect;
-                            const offsetPosition = elementPosition - offset;
-                            window.scrollTo({
-                                top: offsetPosition,
-                                behavior: "smooth",
+                        if (!validateForm("et-to-greg")) return;
+                        clearResults("conversion");
+                        showLoading("etToGregResult");
+                        const year = parseInt(
+                            document.getElementById("etYear").value,
+                        );
+                        const month = parseInt(
+                            document.getElementById("etMonth").value,
+                        );
+                        const day = parseInt(
+                            document.getElementById("etDay").value,
+                        );
+                        try {
+                            const res = await fetch("/api/convert", {
+                                method: "POST",
+                                headers: { "Content-Type": "application/json" },
+                                body: JSON.stringify({
+                                    type: "etToGreg",
+                                    year,
+                                    month,
+                                    day,
+                                }),
                             });
+                            if (!res.ok) throw new Error("API response not OK");
+                            const data = await res.json();
+                            if (data.error) {
+                                showError("etToGregResult", data.error);
+                            } else {
+                                const message = `${translations.results.gregorianDate} ${data.year}-${String(data.month).padStart(2, "0")}-${String(data.day).padStart(2, "0")}`;
+                                showResult("etToGregResult", message);
+                                document
+                                    .getElementById("copyEtToGreg")
+                                    .classList.remove("d-none");
+                                document.getElementById("copyEtToGreg").onclick =
+                                    () => copyToClipboard(message, "copyEtToGreg");
+                            }
+                        } catch (err) {
+                            console.error("ET to Greg Error:", err);
+                            showError(
+                                "etToGregResult",
+                                "የሰርቨር ስህተት - ለዝርዝር ኮንሶል ይመልከቱ",
+                            );
                         }
                     });
-                });
+
+                // Gregorian to Ethiopian
+                document
+                    .getElementById("greg-to-et")
+                    .addEventListener("submit", async (e) => {
+                        e.preventDefault();
+                        if (!validateForm("greg-to-et")) return;
+                        clearResults("conversion");
+                        showLoading("gregToEtResult");
+                        const dateStr = document.getElementById("gregDate").value;
+                        const [year, month, day] = dateStr.split("-").map(Number);
+                        try {
+                            const res = await fetch("/api/convert", {
+                                method: "POST",
+                                headers: { "Content-Type": "application/json" },
+                                body: JSON.stringify({
+                                    type: "gregToEt",
+                                    year,
+                                    month,
+                                    day,
+                                }),
+                            });
+                            if (!res.ok) throw new Error("API response not OK");
+                            const data = await res.json();
+                            if (data.error) {
+                                showError("gregToEtResult", data.error);
+                            } else {
+                                const monthName = translations.months.find(
+                                    (m) => m.value === data.month
+                                ).name;
+                                const message = `${translations.results.ethiopianDate} ${data.year}/${data.month} (${monthName}) /${data.day}`;
+                                showResult("gregToEtResult", message);
+                                document
+                                    .getElementById("copyGregToEt")
+                                    .classList.remove("d-none");
+                                document.getElementById("copyGregToEt").onclick =
+                                    () => copyToClipboard(message, "copyGregToEt");
+                            }
+                        } catch (err) {
+                            console.error("Greg to ET Error:", err);
+                            showError(
+                                "gregToEtResult",
+                                "የሰርቨር ስህተት - ለዝርዝር ኮንሶል ይመልከቱ",
+                            );
+                        }
+                    });
+
+                // Formatting
+                document
+                    .getElementById("format-form")
+                    .addEventListener("submit", async (e) => {
+                        e.preventDefault();
+                        if (!validateForm("format-form")) return;
+                        clearResults("formatting");
+                        showLoading("formatResult");
+                        const year = parseInt(
+                            document.getElementById("formatYear").value,
+                        );
+                        const month = parseInt(
+                            document.getElementById("formatMonth").value,
+                        );
+                        const day = parseInt(
+                            document.getElementById("formatDay").value,
+                        );
+                        const layout =
+                            document.getElementById("formatLayout").value;
+                        try {
+                            const res = await fetch("/api/format", {
+                                method: "POST",
+                                headers: { "Content-Type": "application/json" },
+                                body: JSON.stringify({ year, month, day, layout }),
+                            });
+                            if (!res.ok) throw new Error("API response not OK");
+                            const data = await res.json();
+                            if (data.error) {
+                                showError("formatResult", data.error);
+                            } else {
+                                const message = `${translations.results.formatted} ${data.result}`;
+                                showResult("formatResult", message);
+                                document
+                                    .getElementById("copyFormat")
+                                    .classList.remove("d-none");
+                                document.getElementById("copyFormat").onclick =
+                                    () => copyToClipboard(message, "copyFormat");
+                            }
+                        } catch (err) {
+                            console.error("Formatting Error:", err);
+                            showError(
+                                "formatResult",
+                                "የሰርቨር ስህተት - ለዝርዝር ኮንሶል ይመልከቱ",
+                            );
+                        }
+                    });
+
+                // Arithmetic
+                document
+                    .getElementById("arithmetic-form")
+                    .addEventListener("submit", async (e) => {
+                        e.preventDefault();
+                        if (!validateForm("arithmetic-form")) return;
+                        clearResults("arithmetic");
+                        showLoading("arithResult");
+                        const year = parseInt(
+                            document.getElementById("arithYear").value,
+                        );
+                        const month = parseInt(
+                            document.getElementById("arithMonth").value,
+                        );
+                        const day = parseInt(
+                            document.getElementById("arithDay").value,
+                        );
+                        const operation =
+                            document.getElementById("arithOperation").value;
+                        const value = parseInt(
+                            document.getElementById("arithValue").value,
+                        );
+                        try {
+                            const res = await fetch("/api/arithmetic", {
+                                method: "POST",
+                                headers: { "Content-Type": "application/json" },
+                                body: JSON.stringify({
+                                    year,
+                                    month,
+                                    day,
+                                    operation,
+                                    value,
+                                }),
+                            });
+                            if (!res.ok) throw new Error("API response not OK");
+                            const data = await res.json();
+                            if (data.error) {
+                                showError("arithResult", data.error);
+                            } else {
+                                const monthName = translations.months.find(
+                                    (m) => m.value === data.month
+                                ).name;
+                                const message = `${translations.results.result} ${data.year}/${data.month} (${monthName}) /${data.day}`;
+                                showResult("arithResult", message);
+                                document
+                                    .getElementById("copyArith")
+                                    .classList.remove("d-none");
+                                document.getElementById("copyArith").onclick = () =>
+                                    copyToClipboard(message, "copyArith");
+                            }
+                        } catch (err) {
+                            console.error("Arithmetic Error:", err);
+                            showError(
+                                "arithResult",
+                                "የሰርቨር ስህተት - ለዝርዝር ኮንሶል ይመልከቱ",
+                            );
+                        }
+                    });
+
+                // Leap Year and Days
+                document
+                    .getElementById("leap-form")
+                    .addEventListener("submit", async (e) => {
+                        e.preventDefault();
+                        if (!validateForm("leap-form")) return;
+                        clearResults("leap");
+                        showLoading("leapResult");
+                        const year = parseInt(
+                            document.getElementById("leapYear").value,
+                        );
+                        const month = document.getElementById("leapMonth").value
+                            ? parseInt(document.getElementById("leapMonth").value)
+                            : 0;
+                        try {
+                            const res = await fetch("/api/leap", {
+                                method: "POST",
+                                headers: { "Content-Type": "application/json" },
+                                body: JSON.stringify({ year, month }),
+                            });
+                            if (!res.ok) throw new Error("API response not OK");
+                            const data = await res.json();
+                            if (data.error) {
+                                showError("leapResult", data.error);
+                            } else {
+                                let result = `${translations.results.isLeapYear} ${data.isLeap}`;
+                                if (data.daysInMonth !== null) {
+                                    result += ` | ${translations.results.daysInMonth} ${data.daysInMonth}`;
+                                }
+                                showResult("leapResult", result);
+                                document
+                                    .getElementById("copyLeap")
+                                    .classList.remove("d-none");
+                                document.getElementById("copyLeap").onclick = () =>
+                                    copyToClipboard(result, "copyLeap");
+                            }
+                        } catch (err) {
+                            console.error("Leap Error:", err);
+                            showError(
+                                "leapResult",
+                                "የሰርቨር ስህተት - ለዝርዝር ኮንሶል ይመልከቱ",
+                            );
+                        }
+                    });
+
+                // Calendar View Generation
+                document
+                    .getElementById("calendar-form")
+                    .addEventListener("submit", async (e) => {
+                        e.preventDefault();
+                        if (!validateForm("calendar-form")) return;
+                        const year = parseInt(
+                            document.getElementById("calYear").value,
+                        );
+                        const month = parseInt(
+                            document.getElementById("calMonth").value,
+                        );
+                        try {
+                            const res = await fetch("/api/leap", {
+                                method: "POST",
+                                headers: { "Content-Type": "application/json" },
+                                body: JSON.stringify({ year, month }),
+                            });
+                            if (!res.ok) throw new Error("API response not OK");
+                            const data = await res.json();
+                            if (data.error) {
+                                alert(data.error);
+                                return;
+                            }
+                            const days = data.daysInMonth || 30;
+                            let table = '<table class="table table-bordered calendar-table"><thead><tr>';
+                            
+                            // Add weekday headers
+                            translations.weekdays.forEach(day => {
+                                table += `<th>${day}</th>`;
+                            });
+                            
+                            table += '</tr></thead><tbody><tr>';
+                            for (let i = 1; i <= days; i++) {
+                                if (i > 1 && (i - 1) % 7 === 0)
+                                    table += "</tr><tr>";
+                                table += `<td>${i}</td>`;
+                            }
+                            table += "</tr></tbody></table>";
+                            document.getElementById("calendarTable").innerHTML =
+                                table;
+                            document
+                                .getElementById("calendarTable")
+                                .classList.add("fade-in");
+                        } catch (err) {
+                            console.error("Calendar Error:", err);
+                            alert("የሰርቨር ስህተት - ለዝርዝር ኮንሶል ይመልከቱ");
+                        }
+                    });
+
+                // Smooth Scrolling for Navbar Links
+                document
+                    .querySelectorAll('a.nav-link[href^="#"]')
+                    .forEach((anchor) => {
+                        anchor.addEventListener("click", function (e) {
+                            e.preventDefault();
+                            const targetId = this.getAttribute("href").substring(1);
+                            const target = document.getElementById(targetId);
+                            if (target) {
+                                const offset = 90; // Adjust for fixed navbar
+                                const bodyRect =
+                                    document.body.getBoundingClientRect().top;
+                                const elementRect =
+                                    target.getBoundingClientRect().top;
+                                const elementPosition = elementRect - bodyRect;
+                                const offsetPosition = elementPosition - offset;
+                                window.scrollTo({
+                                    top: offsetPosition,
+                                    behavior: "smooth",
+                                });
+                            }
+                        });
+                    });
+            }
+
+            // Initialize the app when DOM is loaded
+            document.addEventListener('DOMContentLoaded', initializeApp);
         </script>
     </body>
 </html>
