@@ -19,4 +19,4 @@ coverage.*
 # Go workspace file
 go.work
 
-public/
+
