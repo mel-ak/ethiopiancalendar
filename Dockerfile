@@ -28,7 +28,7 @@ WORKDIR /app
 # Copy the binary from builder
 COPY --from=builder /app/ethiopian-calendar .
 # Copy static files
-COPY public/index.html .
+COPY public/ ./public/
 
 # Expose port 8080
 EXPOSE 8080
