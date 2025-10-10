@@ -52,7 +52,7 @@ type APIResponse struct {
 func main() {
 	// Serve static index.html
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		http.ServeFile(w, r, filepath.Join(".", "index.html"))
+		http.ServeFile(w, r, filepath.Join(".", "public/index.html"))
 	})
 
 	// Conversion endpoint
